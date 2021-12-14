@@ -1,13 +1,11 @@
-import {isDarkModeVar, isLoggedInVar} from "../apollo";
+import { logUserOut } from "../apollo";
 
-function Home(){
+function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      <button onClick={()=> isLoggedInVar(false)}>Log out now!</button><br/>
-      <button onClick={()=> isDarkModeVar(true)}>to dark</button>
-      <button onClick={()=> isDarkModeVar(false)}>to light</button>
+      <h1>Welcome we did it!</h1>
+      <button onClick={() => logUserOut()}>Log out now!</button>
     </div>
-  )
+  );
 }
-export default Home; 
+export default Home;
