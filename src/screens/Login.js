@@ -1,7 +1,5 @@
 import { gql, useMutation } from "@apollo/client";
-import {
-  faFacebookSquare,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useForm } from "react-hook-form";
@@ -42,7 +40,6 @@ const LOGIN_MUTATION = gql`
 
 function Login() {
   const location = useLocation();
-  console.log(location);
   const {
     register,
     handleSubmit,
@@ -78,6 +75,7 @@ function Login() {
     if (loading) {
       return;
     }
+    console.log(data)
     const { username, password } = getValues();
     login({
       variables: { username, password },
