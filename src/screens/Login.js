@@ -55,6 +55,7 @@ function Login() {
       password: location?.state?.password || "",
     },
   });
+
   const onCompleted = (data) => {
     const {
       login: { ok, error, token },
@@ -68,19 +69,21 @@ function Login() {
       logUserIn(token);
     }
   };
+
   const [login, { loading }] = useMutation(LOGIN_MUTATION, {
     onCompleted,
   });
+
   const onSubmitValid = (data) => {
     if (loading) {
       return;
     }
-    console.log(data)
     const { username, password } = getValues();
     login({
       variables: { username, password },
     });
   };
+
   const clearLoginError = () => {
     clearErrors("result");
   };

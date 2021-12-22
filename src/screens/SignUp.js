@@ -1,5 +1,5 @@
 import { gql, useMutation } from "@apollo/client";
-import {  faMugHot } from "@fortawesome/free-solid-svg-icons";
+import { faMugHot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
@@ -20,7 +20,7 @@ const HeaderContainer = styled.div`
 `;
 
 const Subtitle = styled(FatLink)`
-  font-size: 16px;
+  font-size: 16px;~
   text-align: center;
   margin-top: 10px;
 `;
@@ -82,9 +82,7 @@ function SingUp() {
       <FormBox>
         <HeaderContainer>
           <FontAwesomeIcon icon={faMugHot} size="3x" />
-          <Subtitle>
-            Sign up to Open your Cool Coffee Shop with Us.
-          </Subtitle>
+          <Subtitle>Sign up to Open your Cool Coffee Shop with Us.</Subtitle>
         </HeaderContainer>
         <form onSubmit={handleSubmit(onSubmitValid)}>
           <Input
