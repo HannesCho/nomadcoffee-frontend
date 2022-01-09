@@ -20,7 +20,7 @@ const HeaderContainer = styled.div`
 `;
 
 const Subtitle = styled(FatLink)`
-  font-size: 16px;~
+  font-size: 16px;
   text-align: center;
   margin-top: 10px;
 `;

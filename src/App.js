@@ -31,10 +31,10 @@ function App() {
                 </Route>
               ) : null}
               <Route path={routes.add} exact>
-              {isLoggedIn ? <Add /> : <Login />}
+                {isLoggedIn ? <Add /> : <Login />}
               </Route>
-              <Route path={'/shop/:id'} exact>
-                   <Shop />
+              <Route path={"/shop/:id"} exact>
+                <Shop />
               </Route>
               <Route>
                 <NotFound />

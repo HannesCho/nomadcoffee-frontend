@@ -23,7 +23,6 @@ const SEE_COFFEE_SHOPS_QUERY = gql`
       categories {
         id
         name
-        slug
       }
     }
   }
